@@ -17,7 +17,20 @@ function renderLicenseBadge(license) {
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
-function renderLicenseLink(license) {}
+function renderLicenseLink(license) {
+  const licenseLink;
+  switch(license) {
+    case apache:
+      licenseLink = `[Apache](https://choosealicense.com/licenses/apache-2.0/)`;
+      break;
+    case mit:
+      licenseLink = `[MIT](https://choosealicense.com/licenses/mit/)`;
+      break;
+    case none:
+      licenseLink = ``;
+      break;
+  }
+}
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
