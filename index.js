@@ -3,7 +3,66 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 
 // TODO: Create an array of questions for user input
-const questions = [];
+const questions = [
+    {
+        type: 'input',
+        message: 'Project Title:',
+        name: 'title',
+    },
+    {
+        type: 'input',
+        message: 'Description:',
+        name: 'description',
+    },
+    {
+        type: 'checkbox',
+        message: 'Include in Table of Contents:',
+        name: 'toc',
+        choices: ['Installation', 'Usage', 'Features', 'Tests', 'Badges', 'Credits', 'How to Contribute', 'License'],
+    },
+    {
+        type: 'input',
+        message: 'Installation Instructions:',
+        name: 'installation',
+    },
+    {
+        type: 'input',
+        message: 'Usage Instructions:',
+        name: 'usage',
+    },
+    {
+        type: 'input',
+        message: 'Highlighted Features:',
+        name: 'features',
+    },
+    {
+        type: 'input',
+        message: 'Test Instructions:',
+        name: 'tests',
+    },
+    {
+        type: 'checkbox',
+        message: 'Include Badges:',
+        name: 'badges',
+        choices: ['HTML', 'CSS', 'JavaScript'],
+    },
+    {
+        type: 'input',
+        message: 'Credits:',
+        name: 'credits',
+    },
+    {
+        type: 'input',
+        message: 'How to Contribute:',
+        name: 'contribute',
+    },
+    {
+        type: 'list',
+        message: 'License:',
+        name: 'license',
+        choices: ['Apache', 'MIT'],
+    },
+];
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
