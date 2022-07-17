@@ -17,9 +17,9 @@ const questions = [
     },
     {
         type: 'checkbox',
-        message: 'Include in Table of Contents:',
+        message: 'Include in README:',
         name: 'toc',
-        choices: ['Installation', 'Usage', 'Features', 'Tests', 'Badges', 'Credits', 'How to Contribute', 'License'],
+        choices: ['Table of Contents', 'Installation', 'Usage', 'Features', 'Tests', 'Badges', 'Credits', 'How to Contribute', 'License'],
     },
     {
         type: 'input',
