@@ -90,6 +90,47 @@ function renderLicenseLink(license) {
   return licenseLink;
 }
 
+function renderTableOfContentsSection(include) {
+  if (!include.includes("Table of Contents")) {
+    return ``;
+  } else {
+    var tableOfContents = `## Table of Contents
+`;
+    if (include.includes("Installation")) {
+      tableOfContents =  tableOfContents + `- [Installation](#installation)
+`;
+    }
+    if (include.includes("Usage")) {
+      tableOfContents = tableOfContents + `- [Usage](#usage)
+`;
+    }
+    if (include.includes("Features")) {
+      tableOfContents = tableOfContents + `- [Features](#features)
+`;
+    }
+    if (include.includes("Tests")) {
+      tableOfContents = tableOfContents + `- [Tests](#tests)
+`;
+    }
+    if (include.includes("Badges")) {
+      tableOfContents = tableOfContents + `- [Badges](#badges)
+`;
+    }
+    if (include.includes("Credits")) {
+      tableOfContents = tableOfContents + `- [Credits](#credits)
+`;
+    }
+    if (include.includes("How to Contribute")) {
+      tableOfContents = tableOfContents + `- [How to Contribute](#how-to-contribute)
+`;
+    }
+    if (include.includes("License")) {
+      tableOfContents = tableOfContents + `- [License](#license)
+`;
+    }
+    return tableOfContents;
+  }
+}
 
 function renderBadgeSection(badges, license, include) {
   if (include.includes("License")) {
@@ -119,9 +160,7 @@ function generateMarkdown(data) {
 ## Description
 ${data.description}
 
-## Table of Contents
-${data.toc}
-
+${renderTableOfContentsSection(data.toc)}
 ## Installation
 ${data.installation}
 
