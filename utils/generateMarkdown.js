@@ -6,13 +6,44 @@ function renderLicenseBadge(license) {
     case apache:
       licenseBadge = `![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)`;
       break;
+    case gnuG3:
+      licenseBadge = `![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)`;
+      break;
     case mit:
       licenseBadge = `![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)`;
+      break;
+    case bsd2:
+      licenseBadge = `![License](https://img.shields.io/badge/License-BSD_2--Clause-orange.svg)`;
+      break;
+    case bsd3:
+      licenseBadge = `![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)`;
+      break;
+    case boost:
+      licenseBadge = `![License](https://img.shields.io/badge/License-Boost_1.0-lightblue.svg)`;
+      break;
+    case cc:
+      licenseBadge = `![License: CC0-1.0](https://img.shields.io/badge/License-CC0_1.0-lightgrey.svg)`;
+      break;
+    case eclipse:
+      licenseBadge = `![License](https://img.shields.io/badge/License-EPL_1.0-red.svg)`;
+      break;
+    case gnuAffero:
+      licenseBadge = `![License: AGPL v3](https://img.shields.io/badge/License-AGPL_v3-blue.svg)`;
+      break;
+    case gnuG2:
+      licenseBadge = `![License: GPL v2](https://img.shields.io/badge/License-GPL_v2-blue.svg)`;
+      break;
+    case gnuLesser:
+      licenseBadge = `![License: LGPL v3](https://img.shields.io/badge/License-LGPL_v3-blue.svg)`;
+      break;
+    case mozilla:
+      licenseBadge = `![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)`;
       break;
     case none:
       licenseBadge = ``;
       break;
   }
+  return licenseBadge;
 }
 
 // TODO: Create a function that returns the license link
@@ -21,15 +52,46 @@ function renderLicenseLink(license) {
   const licenseLink;
   switch(license) {
     case apache:
-      licenseLink = `[Apache](https://choosealicense.com/licenses/apache-2.0/)`;
+      licenseLink = `[Apache License 2.0](https://opensource.org/licenses/Apache-2.0)`;
+      break;
+    case gnuG3:
+      licenseLink = `[GNU General Public License v3.0](https://opensource.org/licenses/GPL-3.0)`;
       break;
     case mit:
-      licenseLink = `[MIT](https://choosealicense.com/licenses/mit/)`;
+      licenseLink = `[MIT License](https://opensource.org/licenses/MIT)`;
+      break;
+    case bsd2:
+      licenseLink = `[BSD 2-Clause "Simplified" License](https://opensource.org/licenses/BSD-2-Clause)`;
+      break;
+    case bsd3:
+      licenseLink = `[BSD 3-Clause "New" or "Revised" License](https://opensource.org/licenses/BSD-3-Clause)`;
+      break;
+    case boost:
+      licenseLink = `[Boost Software License 1.0](https://opensource.org/licenses/BSL-1.0)`;
+      break;
+    case cc:
+      licenseLink = `[Creative Commons Zero v1.0 Universal](https://choosealicense.com/licenses/cc0-1.0/)`;
+      break;
+    case eclipse:
+      licenseLink = `[Eclipse Public License 2.0](https://opensource.org/licenses/EPL-2.0)`;
+      break;
+    case gnuAffero:
+      licenseLink = `[GNU Affero General Public License v3.0](https://opensource.org/licenses/AGPL-3.0)`;
+      break;
+    case gnuG2:
+      licenseLink = `[GNU General Public License v2.0](https://opensource.org/licenses/GPL-2.0)`;
+      break;
+    case gnuLesser:
+      licenseLink = `[GNU Lesser General Public License v2.1](https://opensource.org/licenses/LGPL-2.1)`;
+      break;
+    case mozilla:
+      licenseLink = `[Mozilla Public License 2.0](https://opensource.org/licenses/MPL-2.0)`;
       break;
     case none:
       licenseLink = ``;
       break;
   }
+  return licenseLink;
 }
 
 // TODO: Create a function that returns the license section of README
