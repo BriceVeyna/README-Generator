@@ -132,6 +132,66 @@ function renderTableOfContentsSection(include) {
   }
 }
 
+function renderInstallationSection(include) {
+  if (include.includes("Installation")) {
+    return `## Installation
+${data.installation}
+`;
+  } else {
+    return ``;
+  }
+}
+
+function renderUsageSection(include) {
+  if (include.includes("Usage")) {
+    return `## Usage
+${data.usage}
+`;
+  } else {
+    return ``;
+  }
+}
+
+function renderFeaturesSection(include) {
+  if (include.includes("Features")) {
+    return `## Features
+${data.features}
+`;
+  } else {
+    return ``;
+  }
+}
+
+function renderTestsSection(include) {
+  if (include.includes("Tests")) {
+    return `## Tests
+${data.tests}
+`;
+  } else {
+    return ``;
+  }
+}
+
+function renderCreditsSection(include) {
+  if (include.includes("Credits")) {
+    return `## Credits
+${data.credits}
+`;
+  } else {
+    return ``;
+  }
+}
+
+function renderContributeSection(include) {
+  if (include.includes("How to Contribute")) {
+    return `## How to Contribute
+${data.contribute}
+`;
+  } else {
+    return ``;
+  }
+}
+
 function renderBadgeSection(badges, license, include) {
   if (!include.includes("Badges") || !include.includes("License")) {
     return ``;
@@ -185,25 +245,13 @@ function generateMarkdown(data) {
 ${data.description}
 
 ${renderTableOfContentsSection(data.toc)}
-## Installation
-${data.installation}
-
-## Usage
-${data.usage}
-
-## Features
-${data.features}
-
-## Tests
-${data.tests}
-
+${renderInstallationSection(data.toc)}
+${renderUsageSection(data.toc)}
+${renderFeaturesSection(data.toc)}
+${renderTestsSection(data.toc)}
 ${renderBadgeSection(data.badges, data.license, data.toc)}
-## Credits
-${data.credits}
-
-## How to Contribute
-${data.contribute}
-
+${renderCreditsSection(data.toc)}
+${renderContributeSection(data.toc)}
 ${renderLicenseSection(data.license, data.toc)}
 `;
 }
