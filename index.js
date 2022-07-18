@@ -19,7 +19,7 @@ const questions = [
         type: 'checkbox',
         message: 'Include in README:',
         name: 'toc',
-        choices: ['Table of Contents', 'Installation', 'Usage', 'Features', 'Tests', 'Badges', 'Credits', 'How to Contribute', 'License'],
+        choices: ['Table of Contents', 'Installation', 'Usage', 'Features', 'Tests', 'Badges', 'Credits', 'How to Contribute', 'Questions', 'License'],
     },
     {
         type: 'input',
@@ -56,6 +56,16 @@ const questions = [
         type: 'input',
         message: 'How to Contribute:',
         name: 'contribute',
+    },
+    {
+        type: 'input',
+        message: 'Enter GitHub username:',
+        name: 'questions-github',
+    },
+    {
+        type: 'input',
+        message: 'Enter email address:',
+        name: 'questions-email',
     },
     {
         type: 'list',
