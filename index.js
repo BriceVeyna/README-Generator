@@ -12,14 +12,19 @@ const questions = [
     },
     {
         type: 'input',
-        message: 'Description:',
+        message: 'Summary Description:',
+        name: 'summary',
+    },
+    {
+        type: 'input',
+        message: 'Main Description:',
         name: 'description',
     },
     {
         type: 'checkbox',
         message: 'Include in README:',
         name: 'toc',
-        choices: ['Table of Contents', 'Installation', 'Usage', 'Features', 'Tests', 'Badges', 'Credits', 'How to Contribute', 'Questions', 'License'],
+        choices: ['Deployed Link', 'Table of Contents', 'Installation', 'Usage', 'Features', 'Tests', 'Badges', 'Credits', 'How to Contribute', 'Questions', 'License'],
     },
     {
         type: 'input',

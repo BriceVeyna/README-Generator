@@ -136,6 +136,16 @@ function renderTableOfContentsSection(include) {
   }
 }
 
+function renderDeployedLink(github, title, include) {
+  if (include.includes("Deployed Link")) {
+    return `### Deployed Link
+[${title}](https://${github.toLowerCase()}.github.io/${title}/)
+`;
+  } else {
+    return ``;
+  }
+}
+
 function renderInstallationSection(installation, include) {
   if (include.includes("Installation")) {
     return `## Installation
@@ -256,10 +266,12 @@ ${renderLicenseLink(license)}`;
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   return `# ${data.title}
+${data.summary}
 
 ## Description
 ${data.description}
 
+${renderDeployedLink(data.github, data.title, data.toc)}
 ${renderTableOfContentsSection(data.toc)}
 ${renderInstallationSection(data.installation, data.toc)}
 ${renderUsageSection(data.usage, data.toc)}
