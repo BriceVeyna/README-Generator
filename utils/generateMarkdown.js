@@ -124,6 +124,10 @@ function renderTableOfContentsSection(include) {
       tableOfContents = tableOfContents + `- [How to Contribute](#how-to-contribute)
 `;
     }
+    if (include.includes("Questions")) {
+      tableOfContents = tableOfContents + `- [Questions](#questions)
+`;
+    }
     if (include.includes("License")) {
       tableOfContents = tableOfContents + `- [License](#license)
 `;
@@ -132,72 +136,72 @@ function renderTableOfContentsSection(include) {
   }
 }
 
-function renderInstallationSection(include) {
+function renderInstallationSection(installation, include) {
   if (include.includes("Installation")) {
     return `## Installation
-${data.installation}
+${installation}
 `;
   } else {
     return ``;
   }
 }
 
-function renderUsageSection(include) {
+function renderUsageSection(usage, include) {
   if (include.includes("Usage")) {
     return `## Usage
-${data.usage}
+${usage}
 `;
   } else {
     return ``;
   }
 }
 
-function renderFeaturesSection(include) {
+function renderFeaturesSection(features, include) {
   if (include.includes("Features")) {
     return `## Features
-${data.features}
+${features}
 `;
   } else {
     return ``;
   }
 }
 
-function renderTestsSection(include) {
+function renderTestsSection(tests, include) {
   if (include.includes("Tests")) {
     return `## Tests
-${data.tests}
+${tests}
 `;
   } else {
     return ``;
   }
 }
 
-function renderCreditsSection(include) {
+function renderCreditsSection(credits, include) {
   if (include.includes("Credits")) {
     return `## Credits
-${data.credits}
+${credits}
 `;
   } else {
     return ``;
   }
 }
 
-function renderContributeSection(include) {
+function renderContributeSection(contribute, include) {
   if (include.includes("How to Contribute")) {
     return `## How to Contribute
-${data.contribute}
+${contribute}
 `;
   } else {
     return ``;
   }
 }
 
-function renderQuestionsSection(include) {
+function renderQuestionsSection(github, email, include) {
   if (include.includes("Questions")) {
     return `## Questions
 If you have any additional questions, feel free to reach out.
-- [Github](https://github.com/${data.questions-github})
-- Email: ${data.questions-email}
+- [Github](https://github.com/${github})
+- Email: ${email}
 `;
   } else {
     return ``;
@@ -257,14 +261,14 @@ function generateMarkdown(data) {
 ${data.description}
 
 ${renderTableOfContentsSection(data.toc)}
-${renderInstallationSection(data.toc)}
-${renderUsageSection(data.toc)}
-${renderFeaturesSection(data.toc)}
-${renderTestsSection(data.toc)}
+${renderInstallationSection(data.installation, data.toc)}
+${renderUsageSection(data.usage, data.toc)}
+${renderFeaturesSection(data.features, data.toc)}
+${renderTestsSection(data.tests, data.toc)}
 ${renderBadgeSection(data.badges, data.license, data.toc)}
-${renderCreditsSection(data.toc)}
-${renderContributeSection(data.toc)}
-${renderQuestionsSection(data.toc)}
+${renderCreditsSection(data.credits, data.toc)}
+${renderContributeSection(data.contribute, data.toc)}
+${renderQuestionsSection(data.github, data.email, data.toc)}
 ${renderLicenseSection(data.license, data.toc)}
 `;
 }
