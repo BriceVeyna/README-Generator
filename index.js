@@ -60,12 +60,12 @@ const questions = [
     {
         type: 'input',
         message: 'Enter GitHub username:',
-        name: 'questions-github',
+        name: 'github',
     },
     {
         type: 'input',
         message: 'Enter email address:',
-        name: 'questions-email',
+        name: 'email',
     },
     {
         type: 'list',
