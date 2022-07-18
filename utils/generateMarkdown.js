@@ -206,11 +206,12 @@ ${contribute}
   }
 }
 
-function renderQuestionsSection(github, email, include) {
+function renderQuestionsSection(github, linkedin, email, include) {
   if (include.includes("Questions")) {
     return `## Questions
 If you have any additional questions, feel free to reach out.
 - [Github](https://github.com/${github})
+- [LinkedIn](https://www.linkedin.com/in/${linkedin}/)
 - Email: ${email}
 `;
   } else {
@@ -280,7 +281,7 @@ ${renderTestsSection(data.tests, data.toc)}
 ${renderBadgeSection(data.badges, data.license, data.toc)}
 ${renderCreditsSection(data.credits, data.toc)}
 ${renderContributeSection(data.contribute, data.toc)}
-${renderQuestionsSection(data.github, data.email, data.toc)}
+${renderQuestionsSection(data.github, data.linkedin, data.email, data.toc)}
 ${renderLicenseSection(data.license, data.toc)}
 `;
 }

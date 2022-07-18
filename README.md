@@ -27,6 +27,7 @@ The list choice of which license link and badge to display is implemented using 
 ## Questions
 If you have any additional questions, feel free to reach out.
 - [Github](https://github.com/BriceVeyna)
+- [LinkedIn](https://www.linkedin.com/in/brice-veyna/)
 - Email: briceveyna@gmail.com
 
 ## License
