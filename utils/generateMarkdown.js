@@ -234,25 +234,25 @@ function renderBadgeSection(badges, license, include) {
     var badgeSection = `## Badges
 `;
     if (badges.includes("HTML")) {
-      badgeSection = badgeSection + `![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)`;
+      badgeSection = badgeSection + `![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) `;
     }
     if (badges.includes("CSS")) {
-      badgeSection = badgeSection + `![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)`;
+      badgeSection = badgeSection + `![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) `;
     }
     if (badges.includes("JavaScript")) {
-      badgeSection = badgeSection + `![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)`;
+      badgeSection = badgeSection + `![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) `;
     }
     if (badges.includes("Markdown")) {
-      badgeSection = badgeSection + `![Markdown](https://img.shields.io/badge/markdown-%23000000.svg?style=for-the-badge&logo=markdown&logoColor=white)`;
+      badgeSection = badgeSection + `![Markdown](https://img.shields.io/badge/markdown-%23000000.svg?style=for-the-badge&logo=markdown&logoColor=white) `;
     }
     if (badges.includes("jQuery")) {
-      badgeSection = badgeSection + `![jQuery](https://img.shields.io/badge/jquery-%230769AD.svg?style=for-the-badge&logo=jquery&logoColor=white)`;
+      badgeSection = badgeSection + `![jQuery](https://img.shields.io/badge/jquery-%230769AD.svg?style=for-the-badge&logo=jquery&logoColor=white) `;
     }
     if (badges.includes("Bootstrap")) {
-      badgeSection = badgeSection + `![Bootstrap](https://img.shields.io/badge/bootstrap-%23563D7C.svg?style=for-the-badge&logo=bootstrap&logoColor=white)`;
+      badgeSection = badgeSection + `![Bootstrap](https://img.shields.io/badge/bootstrap-%23563D7C.svg?style=for-the-badge&logo=bootstrap&logoColor=white) `;
     }
     if (badges.includes("Node.js")) {
-      badgeSection = badgeSection + `![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)`;
+      badgeSection = badgeSection + `![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white) `;
     }
     if (include.includes("License")) {
       badgeSection = badgeSection + `${renderLicenseBadge(license)}`;
