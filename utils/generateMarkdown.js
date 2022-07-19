@@ -1,5 +1,4 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
+// Returns a license badge based on which license is passed into the function.
 function renderLicenseBadge(license) {
   var licenseBadge;
   switch(license) {
@@ -44,8 +43,7 @@ function renderLicenseBadge(license) {
   return licenseBadge;
 }
 
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
+// Returns a license link based on which license is passed into the function.
 function renderLicenseLink(license) {
   var licenseLink;
   switch(license) {
@@ -90,6 +88,7 @@ function renderLicenseLink(license) {
   return licenseLink;
 }
 
+// Returns a table of contents with different information depending on which sections are selected for inclusion in the README, if a table of contents is not selected then an empty string is returned instead.
 function renderTableOfContentsSection(include) {
   if (!include.includes("Table of Contents")) {
     return ``;
@@ -136,6 +135,7 @@ function renderTableOfContentsSection(include) {
   }
 }
 
+// Returns a deployed link section from github username and project title inputs, if a deployed link section is not included then an empty string is returned instead.
 function renderDeployedLink(github, title, include) {
   if (include.includes("Deployed Link")) {
     return `### Deployed Link
@@ -146,6 +146,7 @@ function renderDeployedLink(github, title, include) {
   }
 }
 
+// Returns an installation section from user input, if an installation section is not included then an empty string is returned instead.
 function renderInstallationSection(installation, include) {
   if (include.includes("Installation")) {
     return `## Installation
@@ -156,6 +157,7 @@ ${installation}
   }
 }
 
+// Returns a usage section from user input, if a usage section is not included then an empty string is returned instead.
 function renderUsageSection(usage, include) {
   if (include.includes("Usage")) {
     return `## Usage
@@ -166,6 +168,7 @@ ${usage}
   }
 }
 
+// Returns a features section from user input, if a features section is not included then an empty string is returned instead.
 function renderFeaturesSection(features, include) {
   if (include.includes("Features")) {
     return `## Features
@@ -176,6 +179,7 @@ ${features}
   }
 }
 
+// Returns a tests section from user input, if a tests section is not included then an empty string is returned instead.
 function renderTestsSection(tests, include) {
   if (include.includes("Tests")) {
     return `## Tests
@@ -186,6 +190,7 @@ ${tests}
   }
 }
 
+// Returns a credits section from user input, if a credits section is not included then an empty string is returned instead.
 function renderCreditsSection(credits, include) {
   if (include.includes("Credits")) {
     return `## Credits
@@ -196,6 +201,7 @@ ${credits}
   }
 }
 
+// Returns a contribute section from user input, if a contribute section is not included then an empty string is returned instead.
 function renderContributeSection(contribute, include) {
   if (include.includes("How to Contribute")) {
     return `## How to Contribute
@@ -206,6 +212,7 @@ ${contribute}
   }
 }
 
+// Returns a questions section from github username, linkedin username, and email inputs, if a questions section is not included then an empty string is returned instead.
 function renderQuestionsSection(github, linkedin, email, include) {
   if (include.includes("Questions")) {
     return `## Questions
@@ -219,6 +226,7 @@ If you have any additional questions, feel free to reach out.
   }
 }
 
+// Returns a badges section with different content depending on which badges are selected for inclusion plus the selected license, if there is no selected license and no selected badges then an empty string is returned instead.
 function renderBadgeSection(badges, license, include) {
   if (!include.includes("Badges") || !include.includes("License")) {
     return ``;
@@ -253,8 +261,7 @@ function renderBadgeSection(badges, license, include) {
   }
 }
 
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
+// Returns the license section using the renderLicenseLink function, if no license is selected then it returns an empty string instead.
 function renderLicenseSection(license, include) {
   if (include.includes("License")) {
     return `## License
@@ -264,7 +271,7 @@ ${renderLicenseLink(license)}`;
   }
 }
 
-// TODO: Create a function to generate markdown for README
+// Generates markdown for README.
 function generateMarkdown(data) {
   return `# ${data.title}
 ${data.summary}
@@ -286,4 +293,5 @@ ${renderLicenseSection(data.license, data.toc)}
 `;
 }
 
+// Exports generated markdown text as a module.
 module.exports = generateMarkdown;
