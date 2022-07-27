@@ -254,6 +254,27 @@ function renderBadgeSection(badges, license, include) {
     if (badges.includes("Node.js")) {
       badgeSection = badgeSection + `![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white) `;
     }
+    if (badges.includes("npm")) {
+      badgeSection = badgeSection + `![npm](https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white) `;
+    }
+    if (badges.includes("Jest")) {
+      badgeSection = badgeSection + `![Jest](https://img.shields.io/badge/Jest-C21325?style=for-the-badge&logo=jest&logoColor=white) `;
+    }
+    if (badges.includes("Express.js")) {
+      badgeSection = badgeSection + `![ExpressJS](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white) `;
+    }
+    if (badges.includes("GitHub Pages")) {
+      badgeSection = badgeSection + `![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-222222?style=for-the-badge&logo=GitHub%20Pages&logoColor=white) `;
+    }
+    if (badges.includes("Insomnia")) {
+      badgeSection = badgeSection + `![Insomnia](https://img.shields.io/badge/Insomnia-5849be?style=for-the-badge&logo=Insomnia&logoColor=white) `;
+    }
+    if (badges.includes("Heroku")) {
+      badgeSection = badgeSection + `![Heroku](https://img.shields.io/badge/Heroku-430098?style=for-the-badge&logo=heroku&logoColor=white) `;
+    }
+    if (badges.includes("MySQL")) {
+      badgeSection = badgeSection + `![MySQL](https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white) `;
+    }
     if (include.includes("License")) {
       badgeSection = badgeSection + `${renderLicenseBadge(license)}`;
     }
