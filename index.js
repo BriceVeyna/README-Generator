@@ -50,7 +50,7 @@ const questions = [
         type: 'checkbox',
         message: 'Include Badges:',
         name: 'badges',
-        choices: ['HTML', 'CSS', 'JavaScript', 'Markdown', 'jQuery', 'Bootstrap', 'Node.js', 'npm', 'Jest', 'Express.js', 'GitHub Pages', 'Insomnia', 'Heroku', 'MySQL'],
+        choices: ['HTML', 'CSS', 'JavaScript', 'Markdown', 'jQuery', 'Bootstrap', 'Node.js', 'npm', 'Jest', 'Express.js', 'GitHub Pages', 'Insomnia', 'Heroku', 'MySQL', 'Sequelize', 'Handlebars.js'],
     },
     {
         type: 'input',

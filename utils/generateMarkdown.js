@@ -275,6 +275,12 @@ function renderBadgeSection(badges, license, include) {
     if (badges.includes("MySQL")) {
       badgeSection = badgeSection + `![MySQL](https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white) `;
     }
+    if (badges.includes("Sequelize")) {
+      badgeSection = badgeSection + `![Sequelize](https://img.shields.io/badge/Sequelize-52B0E7?style=for-the-badge&logo=Sequelize&logoColor=white) `;
+    }
+    if (badges.includes("Handlebars.js")) {
+      badgeSection = badgeSection + `![HandlebarsJS](https://img.shields.io/badge/Handlebars.js-f0772b?style=for-the-badge&logo=handlebarsdotjs&logoColor=black) `;
+    }
     if (include.includes("License")) {
       badgeSection = badgeSection + `${renderLicenseBadge(license)}`;
     }
